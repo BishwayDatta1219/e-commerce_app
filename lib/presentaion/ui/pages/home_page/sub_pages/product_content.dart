@@ -31,7 +31,7 @@ class _ProductContentState extends State<ProductContent> {
       title: 'Dell Latitude 5000 5450 14" Notebook',
       description:
           ' Full HD - Intel Core Ultra 5 125U - 16 GB - 256 GB SSD - Titan Gray',
-      price: 137.222,
+      price: 137.00,
       imagePath:
           "https://m.media-amazon.com/images/I/51kAOLVS21L._AC_SL1280_.jpg",
     ),
