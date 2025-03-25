@@ -1,17 +1,12 @@
+import 'package:e_commerce_app/domain/entities/product_entity.dart';
 import 'package:flutter/material.dart';
 
 class ProductItem extends StatefulWidget {
-  final String title;
-  final String description;
-  final double price;
-  final String imagePath;
+  final ProductEntity product;
 
   const ProductItem({
     super.key,
-    required this.title,
-    required this.description,
-    required this.price,
-    required this.imagePath,
+    required this.product,
   });
 
   @override
@@ -53,7 +48,7 @@ class _ProductItemState extends State<ProductItem> {
                         width: 80.0,
                         height: 80.0,
                         child: Image.network(
-                          widget.imagePath,
+                          widget.product.imagePath,
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -70,7 +65,7 @@ class _ProductItemState extends State<ProductItem> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      widget.title,
+                      widget.product.title,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
@@ -79,7 +74,7 @@ class _ProductItemState extends State<ProductItem> {
                       ),
                     ),
                     Text(
-                      widget.description,
+                      widget.product.description,
                       maxLines: 2,
                       textAlign: TextAlign.justify,
                       overflow: TextOverflow.ellipsis,
@@ -123,7 +118,7 @@ class _ProductItemState extends State<ProductItem> {
                       ],
                     ),
                     Text(
-                      'BDT ${widget.price}',
+                      'BDT ${widget.product.price}',
                       style: TextStyle(
                         fontSize: 12.0,
                         fontWeight: FontWeight.bold,
