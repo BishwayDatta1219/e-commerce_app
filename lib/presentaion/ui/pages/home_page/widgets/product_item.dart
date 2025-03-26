@@ -14,7 +14,7 @@ class ProductItem extends StatefulWidget {
 }
 
 class _ProductItemState extends State<ProductItem> {
-  bool _isFavorite = true;
+  bool _isFavorite = false;
 
   _setIsFavourite(bool val) {
     setState(() {

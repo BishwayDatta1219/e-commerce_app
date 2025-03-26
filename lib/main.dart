@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/presentaion/ui/pages/home_page/home_page.dart';
+import 'package:e_commerce_app/presentaion/ui/pages/home_page/landing_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'E-Commerce App',
-      home: HomePage(),
+      home: LandingPage(),
     );
   }
 }

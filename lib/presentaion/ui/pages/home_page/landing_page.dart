@@ -4,17 +4,20 @@ import 'package:e_commerce_app/presentaion/ui/pages/home_page/sub_pages/favourit
 import 'package:e_commerce_app/presentaion/ui/pages/home_page/sub_pages/home_content.dart';
 import 'package:e_commerce_app/presentaion/ui/pages/home_page/sub_pages/product_content.dart';
 import 'package:e_commerce_app/presentaion/ui/pages/home_page/sub_pages/shopping_cart_content.dart';
+import 'package:e_commerce_app/presentaion/ui/pages/home_page/sub_pages/user_content.dart';
+
+// import 'package:e_commerce_app/presentaion/ui/pages/home_page/sub_pages/user_content.dart';
 import 'package:e_commerce_app/presentaion/ui/pages/home_page/sub_pages/wishlist_content.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class LandingPage extends StatefulWidget {
+  const LandingPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<LandingPage> createState() => _LandingPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _LandingPageState extends State<LandingPage> {
   int _selectedBottomNavItemIndex = 0;
 
   _setSelectedBottomNavItemIndex(int index) {
@@ -33,9 +36,12 @@ class _HomePageState extends State<HomePage> {
     } else if (_selectedBottomNavItemIndex == 3) {
       return WishlistContent();
     } else if (_selectedBottomNavItemIndex == 4) {
-      return ShoppingCartContent();
+      return UserContent();
     }
     return Text("ERROR!!");
+    // else if (_selectedBottomNavItemIndex == 4) {
+    // return ShoppingCartContent();
+
   }
 
   @override
@@ -166,14 +172,25 @@ class _HomePageState extends State<HomePage> {
             fontWeight: FontWeight.bold,
           ),
         ),
+        // CurvedNavigationBarItem(
+        //   child: Icon(Icons.shopping_cart_rounded, color: Colors.black87),
+        //   label: 'Cart',
+        //   labelStyle: TextStyle(
+        //     color: Colors.black87,
+        //     fontWeight: FontWeight.bold,
+        //   ),
+        // ),
         CurvedNavigationBarItem(
-          child: Icon(Icons.shopping_cart_rounded, color: Colors.black87),
-          label: 'Cart',
+          child: Icon(
+            Icons.person_rounded,
+            color: Colors.black87,
+          ),
+          label: "User",
           labelStyle: TextStyle(
             color: Colors.black87,
             fontWeight: FontWeight.bold,
           ),
-        ),
+        )
       ],
     );
   }
